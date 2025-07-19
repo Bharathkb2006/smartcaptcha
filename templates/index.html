@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CAPTCHA Home</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <h2>Welcome!</h2>
+  <p>If you're a normal user, click the button below 👇</p>
+  <button onclick="window.location.href='normal'">Start Normal CAPTCHA</button>
+  <script>
+    const msg = new SpeechSynthesisUtterance("If you're visually challenged, press Enter to continue.");
+    speechSynthesis.speak(msg);
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        window.location.href = "visual";
+      }
+    });
+  </script>
+</body>
+</html>

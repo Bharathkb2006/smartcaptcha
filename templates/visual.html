@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gesture CAPTCHA</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <h2>Launching Gesture CAPTCHA...</h2>
+  <script>
+    const msg = new SpeechSynthesisUtterance("Starting gesture based CAPTCHA.");
+    speechSynthesis.speak(msg); 
+    fetch("/start-gesture");
+  </script>
+</body>
+</html>
