@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: gesture-captcha
-    env: python
-    buildCommand: pip install -r requirement.txt
-    startCommand: gunicorn app:app
-    plan: free
-    autoDeploy: true
